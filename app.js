@@ -25,7 +25,14 @@ function agregarAmigo(){
 
 // Función Sortear amigo secreto
 function sortearAmigo(){
-    console.log(`Sortear`);
+    if(listaAmigoSorteado.length<=1){
+        alert("Necesitas agregar por lo menos dos amigos");
+        document.getElementById('amigo').focus();
+    }else {
+        let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
+        console.log(indiceAleatorio);
+    }
+    
 }
 
 //Función limpiar caja
