@@ -15,7 +15,7 @@ function agregarAmigo(){
             alert("Ya agregaste este amigo, agrega un nombre diferente");
         }else {
             listaAmigoSorteado.push(amigoSecreto);
-            
+            listaAmigos();           
     }
     console.log(`${amigoSecreto}`);
     console.log(listaAmigoSorteado.length);
@@ -34,3 +34,13 @@ function limpiarCaja(){
     document.getElementById('amigo').focus();
 }
 
+//Función para agregar Amigos a una lista
+function listaAmigos() {
+    const lista = document.getElementById('listaAmigos');
+    lista.innerHTML = "";
+    for (let amigo of listaAmigoSorteado) {
+        const elemento = document.createElement('li');
+        elemento.textContent = amigo;
+        lista.appendChild(elemento);
+    }
+}
