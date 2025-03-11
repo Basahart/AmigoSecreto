@@ -6,17 +6,20 @@ let listaAmigoSorteado = [];
 
 // Función agregar amigo secreto
 function agregarAmigo(){
-    let amigoSecreto = String(document.getElementById('amigo').value);
+    let amigoSecreto = String(document.getElementById('amigo').value.trim());
     if(amigoSecreto === ""){
         alert("Por favor, inserte un nombre.");
         return;
-    }else {   
-    }   if(listaAmigoSorteado.includes(amigoSecreto)){
-            alert("Ya agregaste este amigo, agrega un nombre diferente");
+    }else {  
+        let validarAmigo = amigoSecreto.toLowerCase();
+        if(listaAmigoSorteado.some(amigo => amigo.toLowerCase() === validarAmigo)){
+            alert(`Ya agregaste a ${amigoSecreto}, agrega un nombre diferente`);
         }else {
             listaAmigoSorteado.push(amigoSecreto);
             listaAmigos();           
     }
+        
+    }   
     console.log(`${amigoSecreto}`);
     console.log(listaAmigoSorteado.length);
     console.log(listaAmigoSorteado);
@@ -26,7 +29,7 @@ function agregarAmigo(){
 // Función Sortear amigo secreto
 function sortearAmigo(){
     if(listaAmigoSorteado.length<=1){
-        alert("Necesitas agregar por lo menos dos amigos");
+        alert("Necesitas agregar por lo menos 2 amigos");
         document.getElementById('amigo').focus();
     }else {
         let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
