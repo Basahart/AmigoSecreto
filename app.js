@@ -31,6 +31,7 @@ function sortearAmigo(){
     }else {
         let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
         console.log(indiceAleatorio);
+        console.log(listaAmigoSorteado[indiceAleatorio]);
     }
     
 }
