@@ -4,7 +4,7 @@
 </p>
 <h1>Challenge Alura: Amigo secreto</h1>
 
-![Badge Finalizado](https://img.shields.io/badge/STATUS-Finalizado-green)
+[![Badge Finalizado](https://img.shields.io/badge/STATUS-Finalizado-green)](https://basahart.github.io/AmigoSecreto/)
 [![Badge Javascript](https://img.shields.io/badge/Leng-Javascript-yellow)](https://developer.mozilla.org/es/docs/Web/JavaScript)
 [![Badge html](https://img.shields.io/badge/Leng-html-orange)](https://developer.mozilla.org/es/docs/Web/HTML)
 [![Badge css](https://img.shields.io/badge/Leng-css-blue)](https://developer.mozilla.org/es/docs/Web/CSS)
