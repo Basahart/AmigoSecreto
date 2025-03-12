@@ -16,7 +16,6 @@ function agregarAmigo(){
             listaAmigoSorteado.push(amigoSecreto);
             listaAmigos();           
         }
-        
     }   
     limpiarCaja();
 }
@@ -29,8 +28,9 @@ function sortearAmigo(){
     }else {
         let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
         resultadoAmigoSecreto(indiceAleatorio);
+        document.getElementById('anadir').setAttribute('disabled','true');
+        document.getElementById('sortear').setAttribute('disabled','true');
     }
-    
 }
 
 //Función limpiar caja
@@ -57,5 +57,4 @@ function resultadoAmigoSecreto(indice) {
     elemento.textContent = `El amigo sorteado secreto es: ${listaAmigoSorteado[indice]}`;
     resultadoAmigo.appendChild(elemento);
     document.getElementById('listaAmigos').innerHTML = "";
-    
 }
