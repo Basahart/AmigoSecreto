@@ -1,9 +1,7 @@
 //Variables
 let listaAmigoSorteado = [];
 
-
 //Funciones
-
 // Función agregar amigo secreto
 function agregarAmigo(){
     let amigoSecreto = String(document.getElementById('amigo').value.trim());
@@ -35,6 +33,7 @@ function sortearAmigo(){
         let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
         console.log(indiceAleatorio);
         console.log(listaAmigoSorteado[indiceAleatorio]);
+        resultadoAmigoSecreto(indiceAleatorio);
     }
     
 }
@@ -47,11 +46,21 @@ function limpiarCaja(){
 
 //Función para agregar Amigos a una lista
 function listaAmigos() {
-    const lista = document.getElementById('listaAmigos');
-    lista.innerHTML = "";
+    const listaDeAmigos = document.getElementById('listaAmigos');
+    listaDeAmigos.innerHTML = "";
     for (let amigo of listaAmigoSorteado) {
         const elemento = document.createElement('li');
         elemento.textContent = amigo;
-        lista.appendChild(elemento);
+        listaDeAmigos.appendChild(elemento);
     }
+}
+
+//Función resultado
+function resultadoAmigoSecreto(indice) {
+    const resultadoAmigo = document.getElementById('resultado');
+    const elemento = document.createElement('li');
+    elemento.textContent = `El amigo sorteado secreto es: ${listaAmigoSorteado[indice]}`;
+    resultadoAmigo.appendChild(elemento);
+    document.getElementById('listaAmigos').innerHTML = "";
+    
 }
