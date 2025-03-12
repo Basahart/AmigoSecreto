@@ -15,12 +15,9 @@ function agregarAmigo(){
         }else {
             listaAmigoSorteado.push(amigoSecreto);
             listaAmigos();           
-    }
+        }
         
     }   
-    console.log(`${amigoSecreto}`);
-    console.log(listaAmigoSorteado.length);
-    console.log(listaAmigoSorteado);
     limpiarCaja();
 }
 
@@ -31,8 +28,6 @@ function sortearAmigo(){
         document.getElementById('amigo').focus();
     }else {
         let indiceAleatorio = Math.floor(Math.random()*listaAmigoSorteado.length);
-        console.log(indiceAleatorio);
-        console.log(listaAmigoSorteado[indiceAleatorio]);
         resultadoAmigoSecreto(indiceAleatorio);
     }
     
